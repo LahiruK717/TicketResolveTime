@@ -18,7 +18,7 @@ find = (submittedTime, schedule) => {
 };
 
 /**
- * Calculate resolve time for the ticket
+ * Recursively calculate resolve time for the ticket
  */
 getResolveTime = (
   submittedTime,
@@ -47,10 +47,6 @@ getResolveTime = (
   );
   let resolveTimeInMinutes;
   let remainingTimeInMinutes;
-
-  if (carryForward == true) {
-    submittedTimeInMinutes = openTimeInMinutes;
-  }
 
   // Set openTime as submitted time on next day
   if (carryForward == true || offDays > 0) {
